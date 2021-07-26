@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import image from "../images/bpp-img.jpeg";
+import image from "../../public/bpp-img.jpeg";
 
 class Homepage extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
       <div>
-        <img src={require("../images/bpp-img.jpeg")} />
+        {/* <img src={process.env.PUBLIC_URL + "/bpp-img.jpeg"} alt="test" /> */}
+        <img src={image} alt="test" />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -7,10 +8,19 @@ module.exports = {
     // "@babel/polyfill", // enables async-await
     "./client/index.js"
   ],
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("development")
+    })
+  ],
   output: {
     path: __dirname,
     filename: "./public/bundle.js",
-    publicPath: "/client/images/"
+    publicPath: "/public/"
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, "public"),
+    publicPath: "/public/"
   },
   resolve: {
     extensions: [".js", ".jsx", "*"]
