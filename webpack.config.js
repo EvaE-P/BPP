@@ -5,7 +5,7 @@ const webpack = require("webpack");
 module.exports = {
   mode: "development",
   entry: [
-    // "@babel/polyfill", // enables async-await
+    "@babel/polyfill", // enables async-await
     "./client/index.js"
   ],
   plugins: [
@@ -16,11 +16,13 @@ module.exports = {
   output: {
     path: __dirname,
     filename: "./public/bundle.js",
-    publicPath: "/public/"
+    // publicPath: "/public/"
+    publicPath: "/"
   },
   devServer: {
     contentBase: path.resolve(__dirname, "public"),
-    publicPath: "/public/"
+    // publicPath: "/public/"
+    publicPath: "/"
   },
   resolve: {
     extensions: [".js", ".jsx", "*"]
@@ -37,17 +39,42 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        // use: "file-loader?name=[name].[ext]&outputPath=./images/",
-        // options: {
-        //   esModule: false
+        // test: /\.(png|jpe?g|gif)$/i,
+        // // use: "file-loader?name=[name].[ext]&outputPath=./images/",
+        // // options: {
+        // //   esModule: false
+        // // }
+        // use: [
+        //   {
+        //   loader: "file-loader?name=/img/[name].[ext]",
+        //   options: {
+        //     esModule: false
+        //   }
         // }
+        // ]
+        // test: /\.(png|jpg|gif)$/i,
+        // use: [
+        //   {
+        //     loader: "url-loader",
+        //     options: {
+        //       fallback: require.resolve("file-loader"),
+        //       limit: 8192
+        //     }
+        //   }
+        // ]
+        test: /\.(png|jp(e*)g|svg)$/,
         use: [
           {
-            loader: "file-loader?name=/img/[name].[ext]",
+            loader: "url-loader",
             options: {
-              esModule: false
+              limit: 8000, // Convert images < 8kb to base64 strings
+              // name: "images/[hash]-[name].[ext]"
+              name: "[path][name].[ext]"
             }
+            // loader: "file-loader?name=/img/[name].[ext]",
+            // options: {
+            //   esModule: false
+            // }
           }
         ]
       },
