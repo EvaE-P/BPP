@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 // import { Nav } from "react-bootstrap";
 import { Router } from "react-router-dom";
+// import history from "../../history";
 import history from "../../history";
+// import companyLogo from "../././images/logo-test.png";
+import companyLogo from "../../images/logo-test.png";
 import {
   Nav,
   NavLink,
@@ -19,7 +22,7 @@ class Navbar extends Component {
       <Router history={history}>
         <Nav>
           <NavLink to="/">
-            <img source="../././images/logo-test.png"></img>
+            <img src={companyLogo}></img>
           </NavLink>
           <h1 className="h1-general">BPP</h1>
           <Bars />
