@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-// import image from "../../public/bpp-img.png";
+import React from "react";
 
-class Homepage extends React.PureComponent {
+class Homepage extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -9,9 +8,6 @@ class Homepage extends React.PureComponent {
   render() {
     return (
       <div>
-        {/* <img src={process.env.PUBLIC_URL + "/bpp-img.jpeg"} alt="test" /> */}
-        {/* <img src={window.location.origin + "/public/bpp-img.png"} alt="test" /> */}
-        {/* <img src={image} alt="test" /> */}
         <img
           className="contact-img"
           width="70"
