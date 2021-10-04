@@ -24,60 +24,56 @@ function Contact(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        <input
-          placeholder="Name"
-          type="text"
-          //   {...bindName}
-          value={name.value}
-          onChange={name.onChange}
-        />
-      </label>
-      <label>
-        <input
-          placeholder="Email"
-          type="text"
-          //   {...bindEmail}
-          value={email.value}
-          onChange={email.onChange}
-        />
-      </label>
-      <label>
-        <input
-          placeholder="Phone"
-          type="text"
-          //   {...bindPhone}
-          value={phone.value}
-          onChange={phone.onChange}
-        />
-      </label>
-      <label>
-        <input
-          placeholder="Subject"
-          type="text"
-          //   {...bindSubject}
-          value={subject.value}
-          onChange={subject.onChange}
-        />
-      </label>
-      <label>
-        <input
-          placeholder="Message"
-          type="text"
-          //   {...bindMessage}
-          value={message.value}
-          onChange={message.onChange}
-        />
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
-    //        <FormWrapper onSubmit={handleSubmit}>
-    //        <Title>Sign in</Title>
-    //        <Input placeholder="Name" {...name} />
-    //        <Input placeholder="Email"{...email} />
-    //        <Button type="submit">Sign in</Button>
-    //    </FormWrapper>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          <input
+            placeholder="Name"
+            type="text"
+            //   {...bindName}
+            value={name.value}
+            onChange={name.onChange}
+          />
+        </label>
+        <label>
+          <input
+            placeholder="Email"
+            type="text"
+            //   {...bindEmail}
+            value={email.value}
+            onChange={email.onChange}
+          />
+        </label>
+        <label>
+          <input
+            placeholder="Phone"
+            type="text"
+            //   {...bindPhone}
+            value={phone.value}
+            onChange={phone.onChange}
+          />
+        </label>
+        <label>
+          <input
+            placeholder="Subject"
+            type="text"
+            //   {...bindSubject}
+            value={subject.value}
+            onChange={subject.onChange}
+          />
+        </label>
+        <label>
+          <input
+            placeholder="Message"
+            type="text"
+            //   {...bindMessage}
+            value={message.value}
+            onChange={message.onChange}
+          />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   );
 }
 

@@ -9,10 +9,10 @@ class Homepage extends React.Component {
     return (
       <div>
         <img
-          className="contact-img"
-          width="70"
-          height="70"
-          src="/images/bpp-img.png"
+          className="princessHomepage"
+          width="100%"
+          height="100%"
+          src="/images/fantasy-princess.jpeg"
         />
       </div>
     );
