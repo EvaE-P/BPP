@@ -17,3 +17,11 @@ nav {
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
 }
+.princessHomepage {
+  width: 100%;
+  height: 100%;
+}
+.logo-img {
+  width: 70px;
+  height: 70px;
+}

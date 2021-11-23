@@ -21,12 +21,7 @@ class Navbar extends Component {
       <Router history={history}>
         <Nav>
           <NavLink to="/">
-            <img
-              className="contact-img"
-              width="70"
-              height="70"
-              src="/images/logo-test.png"
-            ></img>
+            <img className="logo-img" src="/images/logo-test.png"></img>
           </NavLink>
           <h1 className="h1-general">BPP</h1>
           <Bars />

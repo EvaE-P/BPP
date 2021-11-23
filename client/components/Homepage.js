@@ -8,12 +8,7 @@ class Homepage extends React.Component {
   render() {
     return (
       <div>
-        <img
-          className="princessHomepage"
-          width="100%"
-          height="100%"
-          src="/images/fantasy-princess.jpeg"
-        />
+        <img className="princessHomepage" src="/images/fantasy-princess.jpeg" />
       </div>
     );
   }
